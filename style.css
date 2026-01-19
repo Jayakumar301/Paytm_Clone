@@ -24,40 +24,42 @@ body {
 }
 
 nav {
-    
+    max-width: 100%;
+    /* width of navbar */
+    margin: auto;
+    /* CENTER NAV BAR */
+    padding: 0 11%;
+
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 10%;
-    font-size: 90%;
-    z-index: 100;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    font-size: 13px;
     font-weight: 500;
     background-color: #FFFFFF;
-    flex-wrap: wrap;
     box-shadow: 0px 0px 10px gray;
+
     position: sticky;
     top: 0;
+    z-index: 100;
 }
 
-.ul-left{
-    list-style-type: none;
+/* Left & Right menus */
+.ul-left,
+.ul-right {
+    list-style: none;
     display: flex;
     align-items: center;
-    transform: translateY(-2%);
+    gap: 20px;
 }
 
-.nav-image{
-    transform: translateY(5%);
+/* Logo */
+.nav-image {
+    width: 120px;
+    height: auto;
 }
 
-.ul-right{
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    gap: 1%;
-    transform: translateY(-2%);
-    transform: translateX(-15%);
-}
 
 
 .icons {
@@ -84,7 +86,7 @@ nav {
 
 .floatingmenuparent {
     position: relative;
-    
+
 }
 
 .floatingmenuparent:hover>.floatingmenu {
@@ -142,10 +144,13 @@ nav {
 }
 
 .container {
-    margin: auto;
+    width: 100%;
     max-width: 1200px;
-    border: 1px solid red;
+    margin: 0 auto;
+    padding: 0 16px;
+    box-sizing: border-box;
 }
+
 
 
 .stmtimg {
@@ -154,7 +159,6 @@ nav {
 }
 
 .rbpmain {
-    border: 2px solid green;
     margin-top: 10px;
     display: grid;
     grid-template-columns: 1fr auto;
@@ -164,11 +168,10 @@ nav {
 }
 
 .rbpmain-column-1 {
-    border: 2px solid black;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    
+
 }
 
 .rbp-text {
@@ -185,7 +188,7 @@ nav {
 }
 
 .card {
-    
+
     border-radius: 10px;
     justify-content: center;
     transition: all 0.23s linear 0s;
@@ -218,12 +221,12 @@ nav {
 
     grid-column: 2/3;
     grid-row: 1/3;
-    border: 2px solid black;
+    margin-bottom: 7%;
     border-radius: 10px;
     transition: all 0.22s linear 0s;
     width: 100%;
-    
 }
+
 .spendsummaryimage {
     width: 100%;
 }
@@ -232,23 +235,22 @@ nav {
     transform: scale(1.02);
 }
 
-
-
-
-
 .two-images-recharge {
+    margin-bottom: 2%;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 2%;
     cursor: pointer;
 }
 
-.cashback-img-div,.BroadBand-img-div {
+.cashback-img-div,
+.BroadBand-img-div {
     transition: all 0.25s linear 0s;
 }
 
-.cashback-img,.BroadBand-img {
+.cashback-img,
+.BroadBand-img {
     width: 100%;
     height: auto;
     display: block;
@@ -803,59 +805,34 @@ nav {
 
 
 
-@media screen and (max-width:1440px) {
 
-
+@media screen and (max-width: 1100px) {
     nav {
-        background-color: #FFFFFF;
+        padding: 0;
         display: flex;
-        align-items: center;
         justify-content: center;
-        font-weight: 500;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        flex-wrap: nowrap;
-        position: sticky;
-        top: 0;
-        gap: 7px;
-    }
-
-    ul {
-        list-style-type: none;
-        display: flex;
-        gap: 7px;
         align-items: center;
-        flex-shrink: 0;
-
-    }
-}
-
-@media screen and (max-width:1024px) {
-
-    * {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 12px;
+        width: 100%;
+        
     }
 
-    img {
-        max-width: 90%;
-        height: auto;
+    .ul-left,
+    .ul-right {
+        
+        display: flex;
+        align-items: center;
+        font-size: 70%;
+        
     }
 
-    * {
+    .container {
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 10%;
         box-sizing: border-box;
     }
-
-    label {
-        font-weight: bold;
-        cursor: pointer;
-    }
-
-
-    body {
-        margin: 0px;
-        padding: 0px;
-        background-color: #F7F9FC;
-    }
-
 
 
 }
